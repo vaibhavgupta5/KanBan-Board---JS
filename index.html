@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<!-- Upper Box Containers -->
+
+    <div class="starting-msg">
+        <p>CLICK PLUS ICON BELOW TO ADD A CARD</p>
+    </div>
+
+    <div class="top-up">
+        <div class="urgent container-box urg" id="b1">
+            <p style=" width: 40vh;
+                padding-bottom: 1rem;
+                font-weight: 600;
+                color: #4b5b75;
+                font-size: 1.25rem; margin-left: 0.85rem;
+                letter-spacing: 1px;">URGENT</p>
+        </div>
+
+
+        <div class="important container-box" id="b2">
+            <p style=" width: 40vh;
+            padding-bottom: 1rem;
+            font-weight: 600;
+            color: #4b5b75;
+            font-size: 1.25rem; margin-left: 0.85rem;
+            letter-spacing: 1px;">IMPORTANT</p>
+        </div>
+
+
+        <div class="inProcess container-box" id="b3">
+            <p style=" width: 40vh;
+            padding-bottom: 1rem;
+            font-weight: 600;
+            color: #4b5b75;
+            font-size: 1.25rem; margin-left: 0.85rem;
+            letter-spacing: 1px;">IN PROCESS</p>
+        </div>
+
+
+        <div class="completed container-box" id="b4">
+            <p style=" width: 40vh;
+                padding-bottom: 1rem;
+                font-weight: 600;
+                color: #4b5b75;
+                font-size: 1.25rem; margin-left: 0.85rem;
+                letter-spacing: 1px;">COMPLETED</p>
+        </div>
+    </div>
+
+<!-- Container containing bottom buttons -->
+
+    <div class="btn-container">
+        <div class="inner-btn-container">
+            <div class="bottom-btn">
+                <button title="add"><i class="fa-solid fa-plus"></i></button>
+                <span class="tooltip"> Add a Card</span>
+            </div>
+            <div class="bottom-btn">
+                <button class="cross-btn-all"> <i class="fa-solid fa-xmark"></i></button>
+                <span class="tooltip">Remove All Cards</span>
+            </div>
+            <div class="bottom-btn">
+                <button class="lock-btn-all"> <i class="fa-solid fa-lock"></i></button>
+                <span class="tooltip">Lock All Cards</span>
+            </div>
+            <div class="bottom-btn">
+                <button class="unlock-btn-all"> <i class="fa-solid fa-lock-open"></i></button>
+                <span class="tooltip"> Unlock All Cards</span>
+            </div>
+            <div class="bottom-btn">
+                <button class="toogle-theme"> <i class="fa-solid fa-sun"></i></button>
+                <span class="tooltip">Change Theme</span>
+            </div>
+        </div>
+    </div>
+
+<!-- Modal Popup -->
+    <div class="container">
+
+        <div id="div1" class="div-style div1" style="display: none;">
+            <div class="div-inner">
+                <textarea name="notes" id="notes" class="textarea-style" placeholder="yes"></textarea>
+                <div class="color-btn">
+                    <button id="red" style="background-color: red;"></button>
+                    <button id="blue" style="background-color: blue;"></button>
+                    <button id="green" style="background-color: green;"></button>
+                    <button id="yellow" style="background-color: yellow;"></button>
+                </div>
+            </div>
+            <p id="msg" class="msg-style">Click Outside to Save</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
